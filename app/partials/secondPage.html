@@ -1,0 +1,48 @@
+
+<div class="container mainSection" ng-controller="AllMobileListCtrl">
+					<div class="row">
+						<div class="col-md-2 leftBar">					
+							<div class="setBordnPadd"><span class="fontSetleft" >Top Brands</span>
+								<ul>
+									<span class="values1"><a href="javascript:void(0)" ng-click="compFilter('All')"><li>All</li></a></span>
+									<span ng-repeat="company in mobileBrands" class="values1"><a href="javascript:void(0)" ng-click="compFilter(company)"><li>{{company}}</li></a></span>
+								</ul>
+							</div>
+							
+							<div class="setBordnPadd"><span class="fontSetleft">PRICE</span>		
+								<ul>
+									<span class="values1"><a href="javascript:void(0)" ng-click="priceFilter('All')"><li>All</li></a></span>
+									<span class="values1"><a href="javascript:void(0)" ng-click="priceFilter('5k')"><li>Rs 5000 and below</li></a></span>
+									<span class="values1"><a href="javascript:void(0)" ng-click="priceFilter('5k-8k')"><li>Rs 5001 - Rs 8000</li></a></span>
+									<span class="values1"><a href="javascript:void(0)" ng-click="priceFilter('8k-10k')"><li>Rs 8001 - Rs 10000</li></a></span>
+									<span class="values1"><a href="javascript:void(0)" ng-click="priceFilter('10k-15k')"><li>Rs 10001 - Rs 15000</li></a></span>
+									<span class="values1"><a href="javascript:void(0)" ng-click="priceFilter('15k')"><li>Rs 15000 and above</li></a></span>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-8 centreBar" style="position: inherit"><span class="fontSetcentre">Mobiles</span>
+							<div class="mblImage"><img src="images/mblSection.jpg" class="img-thumbnail" alt="Cinque Terre" ></div>
+								<div class="row11">
+									<div ng-repeat="(jsonType, data) in mobiles track by $index">
+										<div ng-repeat="(company, detail) in data track by $index" class="setBoxBorder">
+											<a href="javascript:void(0)"><div ng-repeat="mblSpecs in detail track by $index" class="setFloatL"><img ng-src="{{mblSpecs.image}}" style="width: 100px;height: 200px">
+												<div class="setbbottom">{{mblSpecs.model}}</div>
+												<div class="setbbottom"><b>Rs. {{mblSpecs.price}}</b></div>
+												<div class="setbbottom">
+													<ul>
+														<li>{{mblSpecs.pCamera}}</li>
+														<li>{{mblSpecs.sCamera}}</li>
+														<li>{{mblSpecs.screen}}</li>
+														<li>{{mblSpecs.os}}</li>
+													</ul>
+												</div>
+											</div></a>
+										</div>	
+									</div>									
+								</div>
+						</div>
+						<div class="col-md-2 rightBar"></div>
+					</div>
+</div>
+										
+

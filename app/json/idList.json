@@ -1,0 +1,16 @@
+{
+    "userDetail": [
+        {
+            "id": "sarvesh",
+            "password": "1234"
+        },
+        {
+            "id": "deepak",
+            "password": "12345"
+        },
+        {
+            "id": "amit",
+            "password": "12346"
+        }
+    ]
+}

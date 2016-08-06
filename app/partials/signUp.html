@@ -1,0 +1,42 @@
+<div class="singUpForm">
+	<div class="setBackColor">
+		<form name="myForm" ng-controller="singUpValidation">
+			<div class="row addSpacing">
+				<div class="col-md-1"></div>
+				<div class="col-md-10"><b>Sign Up Form :</b></div>
+			</div>
+			<div class="row addSpacing">
+				<div class="col-md-1"></div>
+				<div class="col-md-10"><input type="text" placeholder="First name" ng-blur="validate(0)" ng-focus="clearField(0,fNameStatus)" ng-model="fName"  ng-class ="fNameStatus? 'changeText':'noChangeText'"></div>
+			</div>
+			<div class="row addSpacing">
+				<div class="col-md-1"></div>
+				<div class="col-md-10"><input type="text" placeholder="Last name" ng-blur="validate(1)" ng-focus="clearField(1,lNameStatus)" ng-model="lName"  ng-class ="lNameStatus? 'changeText':'noChangeText'"></div>
+			</div>
+			<div class="row addSpacing">
+				<div class="col-md-1"></div>
+				<div class="col-md-10"><input type="text" placeholder="User name" ng-blur="validate(2)" ng-focus="clearField(2,uNameStatus)" ng-model="uName"  ng-class ="uNameStatus? 'changeText':'noChangeText'"></div>
+			</div>
+			<div class="row addSpacing">
+				<div class="col-md-1"></div>
+				<div class="col-md-10"><input type="password" placeholder="password" ng-blur="validate(3)" ng-focus="clearField(3,passStatus)" ng-model="pass"  ng-class ="passStatus? 'changeText':'noChangeText'"></div>
+			</div>
+			<div class="row addSpacing">
+				<div class="col-md-1"></div>
+				<div class="col-md-10"><input type="email" name="input" placeholder="Email id" ng-blur="validate(4)" ng-focus="clearField(4,emailStatus)" ng-model="email"  ng-class ="emailStatus? 'changeText':'noChangeText'" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" /></div>
+			</div>
+			<div class="row addSpacing">
+				<div class="col-md-1"></div>
+				<div class="col-md-10"><input type="text" placeholder="Phone Number" ng-blur="validate(5)" ng-focus="clearField(5,phoneStatus)" ng-model="phone"  ng-class ="phoneStatus? 'changeText':'noChangeText'" ng-minlength="10"
+               ng-maxlength="10"
+               ng-pattern="/^[A-Z0-9]+$/"/></div>
+			</div>
+			<div class="row addSpacing">
+				<div class="col-md-1"></div>
+				<div class="col-md-10"><button type="button" class="btn btn-primary btn-primary1" ng-disabled="!enableSubmit" ng-click="submitForm()">Submit</button></div>
+			</div>
+		</form>
+
+	</div>
+	
+</div>

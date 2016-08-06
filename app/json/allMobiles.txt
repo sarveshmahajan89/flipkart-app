@@ -1,0 +1,78 @@
+{  
+   "mobiles":{  
+      "brand":"HTC"[            
+            "model":"HTC Desire 526G Plus"
+			{
+				"image":"images/mobiles/htc-desire-526g-plus.jpeg",
+				"pCamera":"8mp",
+				"sCamera":"2mp",
+				"screen":"4.7 inches",
+				"os":"Android 4.4",
+				"memory":"upto 32GB",
+				"processor":"1.7 GHz Octa Core Processor",
+				"price":"10236"
+			},
+			"model":"HTC Desire 616"
+			 {  
+				"image":"images/mobiles/htc-desire-616.jpeg",
+				"pCamera":"8mp",
+				"sCamera":"2mp",
+				"screen":"5 inches",
+				"os":"Android 4.4",
+				"memory":"upto 32GB",
+				"processor":"1.4 GHz Octa Core Processor",
+				"price":"12290"
+			 }
+      ],
+      "brand":"Xiomi"[  
+			"model":"Mi 4 64Gb"
+			 {   
+				"image":"images/mobiles/mi-mi4-64gb.jpeg",
+				"pCamera":"13mp",
+				"sCamera":"8mp",
+				"screen":"5 inches",
+				"os":"Android 4.4",
+				"memory":"64 Gb",
+				"processor":"2.5 GHz Octa Core Processor",
+				"price":"23999"
+			 }
+      ],
+      "brand":"Micromax"[  
+			"model":"Micromax Canvas Nitro A311"
+			 {  
+				"image":"images/mobiles/micromax-canvas-nitro.jpeg",
+				"pCamera":"13mp",
+				"sCamera":"5mp",
+				"screen":"5 inches",
+				"os":"Android 4.4.2",
+				"memory":"upto 32GB",
+				"processor":"1.7 GHz Octa Core Processor",
+				"price":"11840"
+			 }
+      ],
+	  "brand":"Motorola"[  
+			"model":"Moto E (2nd Gen)"
+			 {              
+				"image":"images/mobiles/motorola-moto-e-2nd-gen.jpeg",
+				"pCamera":"5mp",
+				"sCamera":"0.3mp",
+				"screen":"4.5 inches",
+				"os":"Android 5.0",
+				"memory":"upto 32GB",
+				"processor":"1.2 GHz Quad Core Processor",
+				"price":"6999"
+			 },
+			"model":"Moto G (2nd Gen)" 
+			 {             
+				"image":"images/mobiles/motorola-g2.jpeg",
+				"pCamera":"8mp",
+				"sCamera":"2mp",
+				"screen":"5 inches",
+				"os":"Android 5.0",
+				"memory":"upto 32GB",
+				"processor":"1.2 GHz Qualcomm Quad Core Processor",
+				"price":"12999"
+			 }
+      ]
+   }
+}

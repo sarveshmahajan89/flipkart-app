@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>Flipkart</title>
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  
+<link rel="StyleSheet" type="text/css" href="style/mystyle.css">  
+</head>
+
+<body>
+	<div class="complete" ng-controller="HeadListCtrl">
+		<div class="header">
+			<div class="firstLine">
+				<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<ul>
+								    <li class="setBorder"><a href="javascript:void(0)"><span><img src="images/ff.jpg"><<span>FlipKart First</span></span></a></li>
+								    <li class="setBorder"><a href="javascript:void(0)"><span><img src="images/ma.jpg"></span><span>Download App</span></a></li>
+								    <li class="setBorder"><a href="javascript:void(0)"><span>Sell</span></a></li>
+								    <li class="setBorder"><a href="javascript:void(0)"><span>24x7 Customer Care</span></a></li>
+								    <li class="setBorder"><a href="javascript:void(0)"><span><img src="images/to.jpg"></span><span>Track Order</span></a></li>
+								    <li class="setBorder"><a href="javascript:void(0)" ng-click="check()"><span><img src="images/bell.jpg"></span></a></li>  
+								    <li class="setBorder" ng-hide="showName"><a href="#/signUp"><span>Singup</span></a></li>
+								    <li class="setBorder" ng-hide="showName"><a href="#/logIn"><span>Login</span></a></li>
+								    <li class="setBorder setPosRel" ng-show="showName" ng-click="showMenu()"><a href="javascript:void(0)"><span>Hi {{userName}}</span></a></li>
+
+								    <div class="userMenu setHover" ng-show="showNameMenu">
+										<ul>
+											<li class="shopByStrip"><a href="javascript:void(0)" ng-click="accountDetail()">Account</a></li>
+											<li class="shopByStrip"><a href="javascript:void(0)" ng-click="logOut()">Log out</a></li>	
+										</ul>
+												<!-- <div class=" alignLeft greyColor">
+													<div class="content"><div><a href="javascript:void(0)">Account</a></div><div><a href="javascript:void(0)">Log out</a></div></div></div> -->
+									</div>
+							  </ul>
+							</div>
+						</div>
+				</div>
+			</div>
+			
+
+
+			<div class="secondLine">
+				<div class="container">
+						<div class="row setFloatLeft" style="width:100%">
+							<div class="col-md-3 logo"><span><a href="javascript:void(0)"><img alt="Flipkart" src="images/logo.jpg" ng-click="redirectHome()"></a></span></div>
+							<div class="col-md-6 input-group " style="
+	    float: left;"><input type="text" class="form-control" placeholder="Search for a product, category or brand" id="search"><span class="input-group-btn"><button class="btn btn-primary" type="button">SEARCH</button></span></div>
+							<div class="col-md-3"><button type="button" class="btn btn-primary btn-primary1"><img src="images/kart.jpg" class="pull-left">CART<span class="badge">0</span></button></div>
+						</div>
+				</div>
+			</div>
+		</div>	
+
+		
+
+	<div class="contain">
+		<div class="contain1" >
+			<div class="header2">
+					<div class="row" >
+							<div class="col-md-12">						
+								<ul>
+									    <li class="setBorder1" ng-mouseover="onEx()" ng-class="isVisible ? 'whiteColor' : 'contain' " ><span><a href="javascript:void(0)"><span>ELECTRONICS  </span><span class="glyphicon glyphicon-chevron-down setFont" ></span></a></span></li>
+									    <li class="setBorder1" ng-mouseover="onHnK()" ng-class="isVisible1 ? 'whiteColor' : 'contain' "><a href="javascript:void(0)"><span>HOME & KITCHEN  </span><span class="glyphicon glyphicon-chevron-down setFont" ></span></a></li>
+									    <li class="setBorder1" ng-mouseover="onMen()" ng-class="isVisible2 ? 'whiteColor' : 'contain' "><a href="javascript:void(0)"><span>MEN  </span><span class="glyphicon glyphicon-chevron-down setFont" ></span></a></li>
+									    <li class="setBorder1"><a href="javascript:void(0)"><span>WOMEN  </span><span class="glyphicon glyphicon-chevron-down setFont" ></span></a></li>
+									    <li class="setBorder1"><a href="javascript:void(0)"><span>BABY & KIDS  </span><span class="glyphicon glyphicon-chevron-down setFont" ></span></a></li>
+									    <li class="setBorder1"><a href="javascript:void(0)"><span>BOOKS & MEDIA  </span><span class="glyphicon glyphicon-chevron-down setFont" ></span></a></li>
+									    <li class="setBorder1"><a href="javascript:void(0)"><span>MORE STORES  </span><span class="glyphicon glyphicon-chevron-down setFont" ></span></a></li>
+									    <li><a href="javascript:void(0)"><span>OFFER ZONE  </span></a></li>
+								    
+								</ul>	
+								  					  		
+							</div>
+					</div>
+			</div>
+			<!--<p ng-show="isVisible">Hello World!</p>-->
+				<div class="exPanel" ng-show="isVisible">
+					<div class="container setBord shopByStrip">
+						<div class="row">
+							<div class="col-md-2">Shop By :</div>
+							<div class="col-md-2"><a href="javascript:void(0)">Categories</a></div>
+							<div class="col-md-2"><a href="javascript:void(0)">Brand Stores</a></div>
+							<div class="col-md-2"><a href="javascript:void(0)">Others</a></div>
+							<div class="col-md-2"><a href="javascript:void(0)">Mi</a></div>
+						</div>
+					</div>
+					<div class="container setBord setHover">
+						<div class="row ">
+							<div class="col-md-2 alignLeft greyColor" ng-click="redirect1()"><a href="javascript:void(0)">Mobiles<span class="glyphicon glyphicon-play setGlyfi"></span></a>
+								<div class="content"><div><a href="javascript:void(0)">Motorola</a></div><div><a href="javascript:void(0)">Huawei Honor</a></div><div><a href="javascript:void(0)">Lenovo</a></div><div><a href="javascript:void(0)">Asus</a></div></div></div>
+							<div class="col-md-2 alignLeft greyColor"><a href="javascript:void(0)">Laptops<span  class="glyphicon glyphicon-play setGlyfi"></span></a>
+								<div class="content"><div><a href="javascript:void(0)">Motorola</a></div><div><a href="javascript:void(0)">Huawei Honor</a></div><div><a href="javascript:void(0)">Lenovo</a></div><div><a href="javascript:void(0)">Asus</a></div></div></div>
+							<div class="col-md-2 alignLeft greyColor"><a href="javascript:void(0)">Televisions<span class="glyphicon glyphicon-play setGlyfi"></span></a>
+								<div class="content"><div><a href="javascript:void(0)">Motorola</a></div><div><a href="javascript:void(0)">Huawei Honor</a></div><div><a href="javascript:void(0)">Lenovo</a></div><div><a href="javascript:void(0)">Asus</a></div></div></div>
+							<div class="col-md-2 alignLeft greyColor"><a href="javascript:void(0)">Large Appliances<span class="glyphicon glyphicon-play setGlyfi"></span></a>
+								<div class="content"><div><a href="javascript:void(0)">Motorola</a></div><div><a href="javascript:void(0)">Huawei Honor</a></div><div><a href="javascript:void(0)">Lenovo</a></div><div><a href="javascript:void(0)">Asus</a></div></div></div>
+							<div class="col-md-2 alignLeft greyColor"><a href="javascript:void(0)">Cameras<span class="glyphicon glyphicon-play setGlyfi"></span></a>
+								<div class="content"><div><a href="javascript:void(0)">Motorola</a></div><div><a href="javascript:void(0)">Huawei Honor</a></div><div><a href="javascript:void(0)">Lenovo</a></div><div><a href="javascript:void(0)">Asus</a></div></div></div>
+						</div>
+					</div>
+			</div>
+			
+			<div class="exPanel" ng-show="isVisible1">
+					<div class="container setBord shopByStrip">
+						<div class="row">
+							<div class="col-md-2">Shop By :</div>
+							<div class="col-md-2"><a href="javascript:void(0)">Categories</a></div>
+							<div class="col-md-2"><a href="javascript:void(0)">Brand Stores</a></div>
+							<div class="col-md-2"><a href="javascript:void(0)">Others</a></div>
+							<div class="col-md-2"><a href="javascript:void(0)">Mi</a></div>
+						</div>
+					</div>
+					<div class="container setBord setHover">
+						<div class="row">
+							<div class="col-md-2 alignLeft greyColor"><a href="javascript:void(0)">Kitchen & Dining<span class="glyphicon glyphicon-play setGlyfi"></span></a>
+								<div class="content"><div><a href="javascript:void(0)">Motorola</a></div><div><a href="javascript:void(0)">Huawei Honor</a></div><div><a href="javascript:void(0)">Lenovo</a></div><div><a href="javascript:void(0)">Asus</a></div></div></div>
+							<div class="col-md-2 alignLeft greyColor"><a href="javascript:void(0)">Laptops<span  class="glyphicon glyphicon-play setGlyfi"></span></a>
+								<div class="content"><div><a href="javascript:void(0)">Motorola</a></div><div><a href="javascript:void(0)">Huawei Honor</a></div><div><a href="javascript:void(0)">Lenovo</a></div><div><a href="javascript:void(0)">Asus</a></div></div></div>
+							<div class="col-md-2 alignLeft greyColor"><a href="javascript:void(0)">Televisions<span class="glyphicon glyphicon-play setGlyfi"></span></a>
+								<div class="content"><div><a href="javascript:void(0)">Motorola</a></div><div><a href="javascript:void(0)">Huawei Honor</a></div><div><a href="javascript:void(0)">Lenovo</a></div><div><a href="javascript:void(0)">Asus</a></div></div></div>
+							<div class="col-md-2 alignLeft greyColor"><a href="javascript:void(0)">Large Appliances<span class="glyphicon glyphicon-play setGlyfi"></span></a>
+								<div class="content"><div><a href="javascript:void(0)">Motorola</a></div><div><a href="javascript:void(0)">Huawei Honor</a></div><div><a href="javascript:void(0)">Lenovo</a></div><div><a href="javascript:void(0)">Asus</a></div></div></div>
+							<div class="col-md-2 alignLeft greyColor"><a href="javascript:void(0)">Cameras<span class="glyphicon glyphicon-play setGlyfi"></span></a>
+								<div class="content"><div><a href="javascript:void(0)">Motorola</a></div><div><a href="javascript:void(0)">Huawei Honor</a></div><div><a href="javascript:void(0)">Lenovo</a></div><div><a href="javascript:void(0)">Asus</a></div></div></div>	
+						</div>
+					</div>
+			</div>
+
+			<div class="exPanel" ng-show="isVisible2">
+					<div class="container setBord shopByStrip">
+						<div class="row">
+							<div class="col-md-2">Shop By</div>
+							<div class="col-md-2"><a href="javascript:void(0)">Categories</a></div>
+							<div class="col-md-2"><a href="javascript:void(0)">Brand Stores</a></div>
+							<div class="col-md-2"><a href="javascript:void(0)">Others</a></div>
+							<div class="col-md-2"><a href="javascript:void(0)">Mi</a></div>
+						</div>
+					</div>
+					<div class="container setBord setHover">
+						<div class="row" >
+							<div ng-repeat="(key, data) in mens" class="col-md-3 alignLeft greyColor">
+								<a href="javascript:void(0)">{{key}}<span class="glyphicon glyphicon-play setGlyfi"></span></a>
+								<div class="content">
+									<div ng-repeat="x in data"><a href="javascript:void(0)">{{x}}</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		
+		</div>
+	</div>
+
+
+		<div ng-view>
+			
+		</div>
+
+</div>
+		<script src="js/angular.min.js"></script>
+
+		 <script src="js/angular-route.min.js"></script>
+		 <script src="js/cookies.js"></script>
+		 <script src="js/main.js"></script>
+		 <script src="js/controllers/controllers.js"></script>
+	 
+	  
+</body>
+</html>
